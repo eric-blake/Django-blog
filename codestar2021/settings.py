@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['codestar2021-eb.herokuapp.com']
+ALLOWED_HOSTS = ['codestar2021-eb.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -40,11 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'blog',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'blog',
 
 ]
 
@@ -90,8 +89,9 @@ WSGI_APPLICATION = 'codestar2021.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://xyoesaeq:Gmy1mO1RXrO0gM_h1c4FCeIv6z-wtoL4@flora.db.elephantsql.com/xyoesaeq"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
