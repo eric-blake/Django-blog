@@ -33,9 +33,11 @@ DEBUG = True
 
 if development:
     ALLOWED_HOSTS = [
-        'localhost', 'http://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com/admin/',  '8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com', 'https://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com']
+        'localhost', 'http://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com/admin/',  '8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com']
 
 # 'codestar2021-eb.herokuapp.com'
 
