@@ -33,7 +33,7 @@ DEBUG = True
 
 if development:
     ALLOWED_HOSTS = [
-        'localhost', 'http://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com/admin/',  '8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com']
+        'localhost', 'http://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com/admin/',  '8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com', 'https://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'blog',
 
 
@@ -67,6 +68,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
