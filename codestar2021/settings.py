@@ -36,7 +36,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 if development:
     ALLOWED_HOSTS = [
-        'localhost', 'http://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com/admin/',  '8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com']
+        'localhost', 'http://8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com/admin/',  '8000-eric-blake-django-blog-p7lyinjgwy.us2.codeanyapp.com', 'https://codestar2021-eb-540ac82e2585.herokuapp.com/']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
